@@ -35,3 +35,25 @@ $('#validate-contact').click(function (e) {
     xhttp.send();
 });
 ```
+## PHP controller
+* file : traitement-formulaire-contact.php 
+```php
+    if($_GET['mail'] != ''){
+        if (filter_var($_GET['mail'], FILTER_VALIDATE_EMAIL)) {
+            echo("Message sent successfuly");
+            $to = "email@email.com"; // this is your Email address
+            $from = $_GET['mail']; // this is the sender's Email address
+            $name = $_GET['nom'];
+            $subject = 'Message from ' . $_GET['prenom'] . ' ' . $_GET['nom'];
+            $message = $name . " said :" . "\n\n" . $_GET['message'];
+            $headers = "From:" . $from;
+            mail($to,$subject,$message,$headers);
+        }
+        else {
+            echo("Invalid email adress");
+        }
+    }
+    else {
+        echo("Email adress is required");
+    }
+```
