@@ -27,7 +27,7 @@ $('#validate-contact').click(function (e) {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             /* Display the result of PHP controller file in PHP view */
-            document.getElementById("contact-response").innerHTML = this.responseText;
+            document.getElementById("ajax-contact-response").innerHTML = this.responseText;
         }
     };
     /* Paramétrer le fichier de traitement php et lui passer des variables*/
