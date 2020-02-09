@@ -1,3 +1,5 @@
+
+```javascript
 /* SMOOTH SCROLL TO ANCHOR */
 $('.anchor').on('click', function() { // Au clic sur un élément
     let page = $(this).attr('href'); // Page cible
@@ -5,3 +7,4 @@ $('.anchor').on('click', function() { // Au clic sur un élément
     $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
     return false;
 });
+```
