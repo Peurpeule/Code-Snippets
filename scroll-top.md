@@ -1,3 +1,4 @@
+```javascript
 // Scroll top mobile
     $(document).ready(function() {
         function scroll_to_top(div) {
@@ -14,3 +15,4 @@
         }
         scroll_to_top(".mobile-page-top");
     });
+```
