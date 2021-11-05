@@ -1,10 +1,9 @@
 
 ```javascript
 /* SMOOTH SCROLL TO ANCHOR */
-$('.anchor').on('click', function() { // Au clic sur un élément
-    let page = $(this).attr('href'); // Page cible
-    let speed = 750; // Durée de l'animation (en ms)
-    $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+$('.anchor').on('click', function() {
+    let page = $(this).attr('href');
+    $('html, body').animate( { scrollTop: $(page).offset().top }, 750 );
     return false;
 });
 ```
