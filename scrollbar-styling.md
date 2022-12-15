@@ -1,7 +1,11 @@
 # CSS scrollbar
 
 ```css
-/* Chrome, edge, safari */
+
+body {
+  scrollbar-width: thin;          /* "auto" or "thin"  */
+  scrollbar-color: blue orange;   /* scroll thumb & track */ 
+}
 body::-webkit-scrollbar {
   width: 12px;               /* width of the entire scrollbar */
 }
@@ -14,9 +18,4 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid orange;  /* creates padding around scroll thumb */
 }
 
-/* Firefox */
-body {
-  scrollbar-width: thin;          /* "auto" or "thin"  */
-  scrollbar-color: blue orange;   /* scroll thumb & track */ 
-}
 ```
